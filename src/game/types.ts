@@ -1,1 +1,4 @@
-export type Mechanic='evenOdd'|'greaterLess'|'oddOneOut'|'sequence'|'quickCalc'|'inhibition'|'memory'|'ruleSwitch'|'visualSearch'|'symbolMatch'|'spatial';export type Choice={id:string;label:string};export type Challenge={prompt:string;choices:Choice[];correctId:string;mechanic:Mechanic;memoryCue?:string};export type Level={id:number;chapter:number;title:string;mechanic:Mechanic;rounds:number;difficulty:number;moving:boolean;memory:boolean;mix:boolean;boss:boolean;starThresholds:[number,number,number]};
+export type Mechanic='evenOdd'|'greaterLess'|'colorRules'|'symbolMatch'|'avoidRules'|'oddOneOut'|'pattern'|'memory'|'previousRule'|'movingObjects'|'ruleSwitch'|'sequence'|'visualSearch'|'distractor'|'quickCalc'|'spatial'|'inhibition'|'mixed';
+export type Choice={id:string;label:string;hint?:string};
+export type Challenge={prompt:string;choices:Choice[];correctIds:string[];mechanic:Mechanic;memoryCue?:string;explanation?:string};
+export type Level={id:number;chapter:number;title:string;mechanic:Mechanic;rounds:number;difficulty:number;moving:boolean;memory:boolean;mix:boolean;boss:boolean;starThresholds:[number,number,number]};
